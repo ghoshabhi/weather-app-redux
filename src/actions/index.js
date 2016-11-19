@@ -6,9 +6,9 @@ export const FETCH_WEATHER = 'FETCH_WEATHER';
 
 export function fetchWeather(city) {
   const REQUEST_URL = `${ROOT_URL}&q=${city},us`;
-
-  const request = axios.get(REQUEST_URL);
   
+  const request = axios.get(REQUEST_URL);
+
   return {
     type: FETCH_WEATHER,
     payload: request
