@@ -22,7 +22,6 @@ class SearchBar extends Component {
     //   alert("through");
     // }
     if(event.target.value == '' || event.target.value == null){
-      alert("error");
       return (
         <Error />
       );

@@ -20,9 +20,9 @@ class WeatherList extends Component {
     console.log("Inside Weather List: " + lon + " " + lat);
 
     return (
-      <tr key={index}>
+      <tr key={name}>
         <td>
-          {/* <GoogleMap lon={lon} lat={lat} /> */}
+          <GoogleMap lon={lon} lat={lat} />
           {name}
         </td>
         <td>
