@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../actions/index';
+import Error from '../components/error_component';
 
 class SearchBar extends Component {
   constructor(props) {
@@ -14,9 +15,23 @@ class SearchBar extends Component {
   }
 
   onInputChange(event) {
-    this.setState({
-      term: event.target.value
-     });
+    // if(event.target.value == '' || event.target.value == null){
+    //   alert("error");
+    // }
+    // else{
+    //   alert("through");
+    // }
+    if(event.target.value == '' || event.target.value == null){
+      alert("error");
+      return (
+        <Error />
+      );
+    }
+    else{
+      this.setState({
+        term: event.target.value
+       });
+    }
   }
 
   onFormSubmit(event) {
